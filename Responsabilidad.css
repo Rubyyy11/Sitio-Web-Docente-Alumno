@@ -1,0 +1,301 @@
+/* ======================================= */
+/* DISEÑO BASE DE LA PÁGINA RESPONSABILIDAD */
+/* ======================================= */
+
+.main-content-wrapper-new {
+    padding: 20px;
+    max-width: 10000px; /* Ancho máximo centrado */
+    margin: 80px auto 20px auto;
+}
+
+.section-container-resp {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* ------------------ TÍTULO PRINCIPAL ------------------ */
+
+.titulo-con-fondo-resp {
+    text-align: center;
+    /* Ajuste de margen para que "flote" sobre la primera sección */
+    margin: -70px auto 30px auto; 
+    max-width: 80%;
+    
+    /* Fondo Azul Oscuro (Simulando FondoMenuLateral.jpg) */
+    background-color: #515886;
+    background-image: url('FondoMenuLateral.jpg'); 
+    background-size: cover;
+    background-position: center;
+    
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    
+    padding: 15px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.card-title-main-resp {
+    font-size: 25px;
+    color: white; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------ SECCIÓN INTRODUCCIÓN (Tarjetas Flotantes) ------------------ */
+
+.intro-section-resp {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* El margen superior compensa el título que subió */
+    margin-top: 40px; 
+}
+
+.info-card-resp {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border: 1px solid #7385ac;
+    position: relative;
+}
+
+.card-title-floating {
+    background-color: #7385ac; /* Azul Intermedio */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    /* Mueve el título fuera de la tarjeta, como en el ejemplo */
+    position: absolute; 
+    top: -20px; 
+    left: 20px;
+    font-size: 1.2em;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* Ajuste para el contenido que sigue al título flotante */
+.info-card-resp p {
+    margin-top: 15px; 
+}
+
+/* Estilo para la imagen flotante en el contexto */
+.card-image-float {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border: 3px solid #515886;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagen-flotante-resp {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+.context-title {
+    background-color: #515886; /* Un color más oscuro para este título */
+}
+
+/* ------------------ SECCIÓN TABLA VENTAJAS/DESVENTAJAS ------------------ */
+
+.section-title-simple {
+    text-align: center;
+    font-size: 1.8em;
+    color: #515886;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed #7385ac;
+}
+
+.responsive-table-wrap {
+    /* Contenedor */
+    background-color: white;
+    border: 3px solid #515886;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.ventajas-desventajas-table {
+    display: flex;
+    width: 100%;
+}
+
+.table-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.column-alumno {
+    border-right: 3px solid #515886;
+    background-color: #f0f4f7; /* Fondo azul muy claro para la primera columna */
+}
+
+.column-maestro {
+    background-color: #f7f0f4; /* Fondo lila muy claro para la segunda columna */
+}
+
+.column-header-resp {
+    text-align: center;
+    color: #515886;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #889ec4;
+    padding-bottom: 5px;
+}
+
+.item-row-resp {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.item-icon {
+    font-size: 2em;
+    color: #515886;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.item-content h4 {
+    color: #515886;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+/* ------------------ SECCIÓN IMPORTANCIA (Estilo Tarjetas/Notas) ------------------ */
+
+.importance-cards-grid {
+    display: grid;
+    /* 3 columnas en PC */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 10px;
+    background-color: #a7b1ca; /* Fondo de la sección de notas */
+    border-radius: 15px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-note-card {
+    background-color: white;
+    border: 2px dashed #4f5c75; /* Borde punteado/rayado para look de nota */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.single-note-card:hover {
+    transform: translateY(-3px) rotate(-1deg);
+    background-color: #f0fcff; /* Color sutil al pasar el ratón */
+}
+
+.note-icon {
+    font-size: 3em;
+    color: #515886;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* ------------------ SECCIÓN EXTRAS Y REFLEXIÓN ------------------ */
+
+/*frase inspiradora*/
+.quote-inspiration-new {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color: #646a79;
+    padding: 20px;
+    border: 1px solid #515886;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 80%;
+    background-color: #fffaf0;
+}
+
+.reflection-box-resp {
+    text-align: center;
+    padding: 30px;
+    background-color: #515886;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+}
+
+.reflection-box-resp h3 {
+    margin-top: 0;
+    color: #b5c4df;
+}
+
+.reflection-icon {
+    font-size: 3em;
+    color: #889ec4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL                      */
+/* ======================================= */
+
+@media (max-width: 800px) {
+    .main-content-wrapper-new {
+        padding: 10px;
+        margin-top: 60px;
+    }
+    
+    .intro-section-resp {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Deshacemos el float de la imagen en móvil */
+    .card-image-float {
+        float: none;
+        margin: 0 auto 15px auto;
+    }
+    .imagen-flotante-resp {
+        max-width: 100%;
+    }
+
+    /* Tabla vertical en móvil */
+    .ventajas-desventajas-table {
+        flex-direction: column;
+    }
+    
+    .table-column {
+        border-right: none;
+        border-bottom: 3px solid #515886;
+    }
+    .column-alumno {
+        border-bottom: 3px solid #515886;
+    }
+    .column-maestro {
+        border-bottom: none; /* Última columna sin borde inferior */
+    }
+
+    /* Tarjetas de importancia a una columna */
+    .importance-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-con-fondo-resp {
+        max-width: 100%;
+        margin: -50px auto 20px auto;
+    }
+    .card-title-main-resp {
+        font-size: 1.5em;
+    }
+}

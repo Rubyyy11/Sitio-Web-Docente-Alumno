@@ -1,0 +1,291 @@
+/* ======================================= */
+/* PALETA DE COLORES (Azules Grisáceos - Coherente con otras páginas) */
+/* ======================================= */
+/* Oscuro: #515886 | Intermedio: #7385ac | Acento: #889ec4 */
+/* Fondo Suave: #e8ecf6 (ya usado en ValoresHumanos) */
+
+:root {
+    --color-base-oscuro: #515886;      /* Azul marino oscuro */
+    --color-base-intermedio: #7385ac; /* Azul grisáceo intermedio */
+    --color-base-acento: #889ec4;     /* Azul claro de acento */
+    --color-base-fondo-suave: #e8ecf6; /* Fondo muy claro */
+    --color-base-texto: #333;         /* Texto general */
+}
+
+/* ======================================= */
+/* ESTILOS GLOBALES Y ENCABEZADO */
+/* ======================================= */
+
+/* Aseguramos que el body y main no tengan márgenes que empujen */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif; /* Asegurar la fuente si no está en Estilazo.css */
+    color: var(--color-base-texto);
+}
+
+.main-content {
+    padding: 0 40px; /* Padding solo a los lados y abajo */
+    max-width: 10000px;
+    margin: 0 auto;
+}
+
+.hero-section-t {
+    position: relative;
+    background-image: url(FondoMenuLateral.jpg); /* Puedes cambiar por una imagen más adecuada si tienes */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 40px; 
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    margin-top: 0; 
+}
+
+.overlay-t {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* Overlay ligeramente oscuro con un tinte del azul oscuro */
+    background: rgba(81, 88, 134, 0.7); 
+}
+
+.hero-content-t {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content-t h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content-t p {
+    font-size: 1.1em;
+}
+
+/* ======================================= */
+/* SECCIÓN 2: DEFINICIÓN (Layout Flotante Inverso) */
+/* ======================================= */
+
+.definition-section-t {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 0;
+    gap: 40px;
+    border-bottom: 2px dashed var(--color-base-intermedio); /* Línea de puntos azul intermedio */
+}
+
+.definition-card-t {
+    flex: 1;
+    min-width: 350px;
+    max-width: 550px;
+    background-color: var(--color-base-fondo-suave); /* Fondo suave */
+    /* Diseño de caja diferente: Marco lateral y sombra fuerte */
+    border: 3px solid var(--color-base-intermedio); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px var(--color-base-oscuro); /* Sombra con azul oscuro */
+}
+
+.definition-card-t h2 {
+    color: var(--color-base-oscuro);
+    border-bottom: 3px solid var(--color-base-acento); /* Acento azul claro */
+    padding-bottom: 10px;
+}
+
+.cita-t {
+    display: block;
+    font-style: italic;
+    color: var(--color-base-oscuro);
+    margin-top: 20px;
+    padding-left: 15px;
+    border-left: 5px solid var(--color-base-acento); /* Acento azul claro */
+}
+
+.image-side-t img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    max-width: 900px;
+    border: 5px solid rgb(59, 68, 97);
+}
+
+/* ======================================= */
+/* SECCIÓN 3: EJEMPLOS (Diseño de Pestañas/Tabs) */
+/* ======================================= */
+
+.examples-section-t {
+    background-color: var(--color-base-fondo-suave); /* Fondo suave */
+    padding: 60px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.examples-section-t h2 {
+    color: var(--color-base-oscuro);
+    margin-bottom: 40px;
+}
+
+.tab-container-t {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tab-card-t {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 30px;
+    text-align: left;
+    border-top: 6px solid var(--color-base-acento); /* Barra de acento azul claro */
+    transition: all 0.3s;
+}
+
+.tab-card-t:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.tab-card-t .icon-t {
+    font-size: 2.8em;
+    color: var(--color-base-intermedio); /* Icono azul intermedio */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tab-card-t h3 {
+    color: var(--color-base-oscuro);
+    margin-top: 0;
+}
+
+/* ======================================= */
+/* SECCIÓN 4: IMPORTANCIA (Diseño de Panel Lateral) */
+/* ======================================= */
+
+.importance-section-t {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 50px 0;
+    gap: 30px;
+}
+
+.importance-list-t {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px 30px;
+    border-right: 2px solid var(--color-base-intermedio);
+}
+
+.importance-list-t h2 {
+    color: var(--color-base-oscuro);
+}
+
+.importance-list-t ul {
+    list-style: none;
+    padding: 0;
+}
+
+.importance-list-t li {
+    padding: 10px 0;
+    font-size: 1.1em;
+    color: #444;
+    border-bottom: 1px dotted #ccc;
+}
+
+.importance-list-t li::before {
+    content: "🔷 "; /* Icono de diamante azul para diferenciar */
+    color: var(--color-base-acento);
+}
+
+/* El panel lateral flotante */
+.importance-panel-t {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-base-oscuro); /* Panel azul oscuro */
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: -10px 10px 0px var(--color-base-acento); /* Sombra lateral con azul claro */
+    position: relative;
+}
+
+.importance-panel-t p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
+}
+
+.panel-image-t {
+    display: block;
+    width: 500px;
+    margin: 20px auto 0;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* ======================================= */
+/* SECCIÓN 5: REFLEXIÓN */
+/* ======================================= */
+.reflection-section-t {
+    background-color: var(--color-base-intermedio); /* Fondo azul intermedio */
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.reflection-quote-t {
+    font-style: normal;
+    font-size: 1.5em;
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid var(--color-base-acento); /* Borde azul de acento */
+    display: inline-block;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.reflection-quote-t strong {
+    color: var(--color-base-fondo-suave); /* Texto fuerte con un color que resalte */
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0 10px;
+    }
+    .hero-section-t {
+        height: 220px;
+        border-radius: 0 0 30px 30px;
+    }
+    .definition-section-t {
+        flex-direction: column;
+    }
+    .image-side-t img {
+        max-width: 100%;
+    }
+    .importance-section-t {
+        flex-direction: column;
+    }
+    .importance-list-t {
+        border-right: none;
+        border-bottom: 2px solid var(--color-base-intermedio);
+        padding-bottom: 30px;
+    }
+}

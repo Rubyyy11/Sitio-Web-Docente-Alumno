@@ -1,0 +1,218 @@
+.main-content-wrapper-cas {
+    padding: 20px;
+    max-width: 10000px;
+    margin-top: 10px;
+}
+
+.section-container-cas {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ======= HERO / ENCABEZADO ======= */
+.hero-section {
+  position: relative;
+  background-image: url(FondoMenuLateral.jpg);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+/* ------------------ SECCIÓN INTRODUCCIÓN (Estilo de Cabecera de Guía) ------------------ */
+
+.intro-header-box {
+    background-color: white;
+    border: 1px solid #7385ac;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #515886;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #889ec4;
+}
+
+.intro-text-small {
+    font-style: italic;
+    color: #7385ac;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.main-image-cas {
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #515886;
+    margin: 15px auto;
+    display: block;
+}
+
+/* ------------------ SECCIÓN COMPONENTES (Bloques Lado a Lado) ------------------ */
+
+.section-title-cas {
+    text-align: center;
+    font-size: 2em;
+    color: #515886;
+    margin-bottom: 30px;
+    padding: 5px;
+    position: relative;
+    display: block;
+    border-bottom: 3px solid #7385ac;
+}
+
+.split-cards-cas {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.component-block-cas {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f7f9fc; /* Fondo muy claro para simular papel */
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #889ec4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.component-title-cas {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin: -30px -30px 20px -30px; /* Hace que el título se extienda fuera del padding */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title-verbal {
+    background-color: #515886;
+}
+.title-nonverbal {
+    background-color: #7385ac;
+}
+
+.list-style-cas {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item-cas {
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 12px;
+    border-left: 4px solid #889ec4; /* Línea decorativa como en las guías */
+    line-height: 1.4;
+}
+.list-item-cas strong {
+    color: #515886;
+}
+
+/* ------------------ SECCIÓN BENEFICIOS (Grid de Iconos) ------------------ */
+
+.benefits-grid-cas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.benefit-card-cas {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #7385ac;
+    border-radius: 15px;
+    padding: 20px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.benefit-card-cas:hover {
+    transform: translateY(-5px);
+    border-color: #515886;
+}
+
+.benefit-icon {
+    font-size: 30px;
+    color: #515886;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.benefit-card-cas h4 {
+    color: #515886;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/*REFLEXIÓN cuadrito-----------------*/
+.reflection-box-resp {
+    text-align: center;
+    padding: 30px;
+    background-color: #515886;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+}
+
+.reflection-box-resp h3 {
+    margin-top: 0;
+    color: #c9d2e2;
+}
+
+.reflection-icon {
+    font-size: 30px;
+    color: #889ec4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ------------------ RESPONSIVE / MÓVIL ------------------ */
+
+@media (max-width: 800px) {
+    .main-content-wrapper-cas {
+        padding: 10px;
+    }
+    .split-cards-cas {
+        flex-direction: column;
+    }
+    .component-title-cas {
+        margin: -30px -20px 20px -20px;
+    }
+    .benefits-grid-cas {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,244 @@
+/* ======= ESTILO BASE ======= */
+:root {
+  --color-fondo: #fff8fb;
+  --color-primario: #808aa1;
+  --color-secundario: #a2aacc;
+  --color-oscuro: #55617c;
+  --color-texto: #333;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+}
+
+/* ======= HERO / ENCABEZADO ======= */
+.hero-section {
+  position: relative;
+  background-image: url(FondoMenuLateral.jpg);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+}
+
+/* ======= DEFINICIÓN ======= */
+.definition-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 30px;
+}
+
+.definition-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  border-left: 8px solid var(--color-primario);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.definition-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-side img {
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  max-width: 400px;
+}
+
+/* ======= EJEMPLOS ======= */
+.examples-section {
+  background-image: url(BackgroundDeBarraDeNavegacion.jpg);
+  padding: 50px 20px;
+  border-radius: 80px 80px 0 0;
+  text-align: center;
+}
+
+.example-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.example-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.example-card:hover {
+  transform: translateY(-8px);
+}
+
+.example-card .icon {
+  font-size: 2.5em;
+  color: var(--color-oscuro);
+}
+
+/* ======= IMPORTANCIA ======= */
+.importance-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 30px;
+}
+
+.importance-card {
+  flex: 1;
+  min-width: 320px;
+  background-color: #ffffff;
+  border-left: 8px solid var(--color-secundario);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.importance-card:hover {
+  transform: translateY(-5px);
+}
+
+.importance-card h2 {
+  color: var(--color-oscuro);
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.importance-card p {
+  font-size: 1.05em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.importance-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.importance-card li {
+  padding: 8px 0;
+  font-size: 1.05em;
+  color: #444;
+}
+
+.importance-card li::before {
+  content: "💜 ";
+}
+
+.circle-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-image {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 6px solid var(--color-secundario);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .importance-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .importance-card {
+    width: 90%;
+  }
+
+  .round-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* ======= REFLEXIÓN ======= */
+.reflection-section {
+  background-color: #1f2344;
+  text-align: center;
+  padding: 40px;
+  border-top: 5px solid var(--color-primario);
+}
+
+.reflection-section blockquote {
+  font-style: italic;
+  font-size: 1.4em;
+  color: var(--color-oscuro);
+  margin-bottom: 20px;
+}
+
+.reflection-box {
+  display: inline-block;
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.reflection-box h3 {
+  margin-top: 0;
+}
+
+.reflection-box .icon {
+  font-size: 2em;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .definition-section, .importance-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section {
+    height: 250px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .round-image {
+    width: 250px;
+    height: 250px;
+  }
+}

@@ -1,0 +1,260 @@
+/* ======================================= */
+/* DISEÑO ESPECÍFICO: COLABORACIÓN REFINADO */
+/* ======================================= */
+
+/* --- Contenedor Principal y Tarjetas de Sección --- */
+.main-content-wrapper-col {
+    padding: 20px;
+    max-width: 10000px; /* Un ancho más angosto para centrar el contenido */
+    margin: 30px auto 20px auto; /* Ajuste el margen superior para el hero */
+}
+
+.section-card-col {
+    background-color: white; /* Fondo blanco para todo el contenido */
+    border: 1px solid #7385ac; /* Borde sutil */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 25px 30px; /* Más padding para el contenido interno */
+    margin-bottom: 30px; /* Espacio entre secciones */
+    position: relative; /* Para z-index si es necesario */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+}
+
+
+/* ======= HERO / ENCABEZADO (Mantenemos el estilo anterior) ======= */
+.hero-section {
+  position: relative;
+  background-image: url('FondoMenuLateral.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 50px; 
+  overflow: hidden;
+  max-width: 90%;
+  margin: 30px auto; /* Este margen ahora es más relevante */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.25); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------ SECCIÓN INTRODUCCIÓN ------------------ */
+
+.intro-header-box-col {
+    /* Ya está encapsulado en .section-card-col, no necesita más borde */
+    text-align: center;
+    padding-bottom: 10px; /* Espacio interno */
+}
+
+.intro-text-col {
+    font-size: 1.1em;
+    color: #515886;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #889ec4;
+}
+
+.intro-text-small-col {
+    font-style: italic;
+    color: #7385ac;
+    margin-top: 20px;
+    font-size: 0.9em; /* Ajuste a 'em' para responsive */
+}
+
+.main-image-col {
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #515886;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------ TÍTULOS DE SECCIÓN ------------------ */
+
+.section-title-col {
+    text-align: center;
+    font-size: 2em;
+    color: #515886;
+    margin-bottom: 30px;
+    padding: 5px;
+    position: relative;
+    display: block;
+    border-bottom: 3px solid #7385ac;
+}
+
+/* ------------------ BLOQUES DE COMPONENTES ------------------ */
+
+.split-cards-col {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.component-block-col {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f7f9fc; /* Fondo muy claro para simular papel */
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #889ec4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para el título flotante */
+    padding-top: 40px; /* Espacio para el título que sube */
+}
+
+.component-title-col {
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    position: absolute; /* Hacemos que flote */
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrado perfecto */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Eliminar márgenes por defecto */
+    min-width: 60%; /* Ancho mínimo para el título */
+}
+
+.component-block-col.block-cooperacion .component-title-col.title-cooperacion {
+    background-color: #515886;
+}
+.component-block-col.block-guia .component-title-col.title-guia {
+    background-color: #7385ac;
+}
+
+.list-style-col {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item-col {
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 12px;
+    border-left: 4px solid #889ec4;
+    line-height: 1.4;
+}
+.list-item-col strong {
+    color: #515886;
+}
+
+/* ------------------ SECCIÓN BENEFICIOS (Grid de Iconos) ------------------ */
+
+.benefits-grid-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.benefit-card-col {
+    text-align: center;
+    background-color: #f0f4f7; /* Fondo sutil para las tarjetas de beneficio */
+    border: 1px solid #7385ac;
+    border-radius: 15px;
+    padding: 20px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.benefit-card-col:hover {
+    transform: translateY(-5px);
+    border-color: #515886;
+}
+
+.benefit-icon-col {
+    font-size: 3em;
+    color: #515886;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.benefit-card-col h4 {
+    color: #515886;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ------------------ SECCIÓN REFLEXIÓN ------------------ */
+
+.reflection-box-col {
+    text-align: center;
+    padding: 30px;
+    background-color: #515886;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+}
+
+.reflection-box-col h3 {
+    margin-top: 0;
+    color: #889ec4;
+}
+
+.reflection-icon-col {
+    font-size: 3em;
+    color: #889ec4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL                      */
+/* ======================================= */
+
+@media (max-width: 800px) {
+    .main-content-wrapper-col {
+        padding: 10px;
+    }
+    .hero-section {
+        border-radius: 20px; /* Menos redondeado en móvil */
+        height: 100px;
+    }
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+    .split-cards-col {
+        flex-direction: column;
+        gap: 20px; /* Menos espacio */
+    }
+    .component-block-col {
+        min-width: 100%;
+        padding-top: 30px; /* Ajuste para el título flotante */
+    }
+    .component-title-col {
+        font-size: 1.3em;
+        top: -15px;
+        min-width: 80%; /* Más ancho en móvil */
+    }
+    .benefits-grid-col {
+        grid-template-columns: 1fr;
+    }
+    .intro-text-small-col {
+        font-size: 0.85em; /* Un poco más pequeño en móvil */
+    }
+}

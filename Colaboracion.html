@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompromisoAlumnoMaestro - Colaboración</title>
+
+  <link rel="stylesheet" type="text/css" href="Estilazo.css">
+  <link rel="stylesheet" type="text/css" href="Colaboracion.css">
+</head>
+
+<body style="background-image: url(HojaDePuntitos.jpg);">
+  <nav> <!--sección para la barrita de navegación de arriba-->
+    <span class="menu-btn" onclick="toggleMenu()">☰</span> <!--ToggleMenu es un menú que se puede mostrar u ocultar mediante un click en el botón de menú-->
+    <span class="nav-title">Cbtis 164</span> <!--titulo de la barra de navegación-->
+
+    <div class="nav-right"> <!--sección donde en la derecha de la barrita van los botones de inicio, docente y alumno-->
+      <a href="Inicio.html">Inicio</a> <!--botones con su conección href-->
+      <a href="ResponsabilidadDelDocente.html">Docente</a>
+      <a href="ResponsabilidadDelAlumno.html">Alumno</a>
+    </div>
+  </nav>
+
+  <div id="sideMenu" class="side-menu"> <!--División de donde va el menú SIDE, o sea menú de la parte de a lado (izquierdo)-->
+    <span class="close-btn" onclick="toggleMenu()">☰</span> <!--Botonsito de menú que se abre y cierra-->
+
+    <!--las seccciones-->
+    <a href="Respeto.html">Respeto</a>
+    <a href="Responsabilidad.html">Responsabilidad</a>
+    <a href="Empatía.html">Empatía</a>
+    <a href="ComunicacionAsertiva.html">Comunicación Asertiva</a>
+    <a href="Colaboracion.html">Colaboración</a>
+    <a href="Tolerancia.html">Tolerancia</a>
+    <a href="Disciplina.html">Disciplina</a>
+    <a href="Honestidad.html">Honestidad</a>
+    <a href="Compromiso.html">Compromiso</a>
+    <a href="ValoresHumanos.html">Valores Humanos</a>
+  </div>
+
+  <main class="main-content-wrapper-col"> <!--La etiqueta <main> (principal) define el contenido principal y único de la página.
+    'main-content-wrapper-col' (contenedor-principal-contenido-columna) es una clase para estilos (En inglish para sonar más electrodoméstico)-->
+
+    <div class="hero-section"> <!--Se llama "hero" por puro estándar y para saber que esa seccción es la más llamativa-->
+      <div class="hero-content"> <!--el contenido ekisde-->
+        <h1>La Colaboración en el Proceso Educativo</h1> <!--h1 por el título-->
+      </div>
+    </div>
+
+    <section class="section-card-col"> <div class="intro-header-box-col"> <p class="intro-text-col">La colaboración es la disposición a trabajar conjuntamente, compartiendo recursos, ideas y esfuerzos
+          para alcanzar una meta en común. En el aula, es fundamental para construir conocimiento.</p>
+        
+        <img src="AlumnosYDocenteColaborando.jpg" alt="Alumnos y docente colaborando" class="main-image-col">
+        
+        <p class="intro-text-small-col">Fomentar un entorno colaborativo enseña a los estudiantes a valorar las distintas perspectivas y a asumir roles dentro de un equipo.</p>
+      </div>
+    </section>
+
+    <section class="section-card-col"> <h2 class="section-title-col">Roles y Tipos de Colaboración</h2>
+
+      <div class="split-cards-col"> <div class="component-block-col block-cooperacion"> <h3 class="component-title-col title-cooperacion">🤝 Alumno a Alumno</h3> <p>Se centra en el trabajo en equipo, la ayuda mutua y el reparto de tareas en proyectos:</p>
+          <ul class="list-style-col"> <li class="list-item-col">Aprendizaje entre pares: Los estudiantes más avanzados apoyan a los que tienen dificultades.</li> <li class="list-item-col">Pensamiento compartido: La diversidad de opiniones enriquece la solución de problemas.</li>
+            <li class="list-item-col">Responsabilidad conjunta: Entender que el éxito o fracaso es de todo el equipo.</li>
+          </ul>
+        </div>
+
+        <div class="component-block-col block-guia"> <h3 class="component-title-col title-guia">🧑‍🏫 Docente como Guía</h3> <p>El docente colabora creando el ambiente y las herramientas para el aprendizaje:</p>
+          <ul class="list-style-col">
+            <li class="list-item-col">Facilitador: Diseña actividades que requieran la interacción grupal y el debate.</li>
+            <li class="list-item-col">Mentor: Participa activamente en la resolución de problemas cuando el equipo lo requiere.</li>
+            <li class="list-item-col">Evaluación holística: Califica no solo el resultado, sino el proceso y la participación individual dentro del grupo.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <center> <img src="AlumnosColaborando.jpg" style="width: 800px;"> <br> <br> </center>
+
+    <section class="section-card-col"> <!--La etiqueta <section> (sección) agrupa contenido relacionado. 'section-card-col' (sección-tarjeta-columna) es una clase para estilos. Piensa en esto como un bloque grande de contenido que va junto xd-->
+    <h2 class="section-title-col">Beneficios de Colaborar en el Aula</h2> <!--El encabezado <h2> (nivel 2) es el título principal de esta sección. 'section-title-col' (título-sección-columna) es la clase que le da estilo al título-->
+      
+      <div class="benefits-grid-col"> <!--El <div> (división) es un contenedor para organizar las tarjetas de beneficios. 'benefits-grid-col' (beneficios-rejilla-columna) se usa para que las tarjetas se organicen en un formato de rejilla (grid) con CSS-->
+          <div class="benefit-card-col"> <!--Este <div> es la primera "card" (tarjeta) de beneficio. 'benefit-card-col' (tarjeta-beneficio-columna) le da estilos de tarjeta (fondo, sombra, etc.)-->
+              <span class="benefit-icon-col">🧠</span> <!--El <span> (contenedor en línea) contiene el icono del cerebro 🧠. 'benefit-icon-col' (icono-beneficio-columna) le da un estilo especial al icono para que se vea bien chido-->
+              <h4>Desarrollo de Habilidades Sociales</h4> <!--El encabezado <h4> (nivel 4) es el título de este beneficio específico-->
+              <p>Mejora la comunicación, la negociación y la empatía al interactuar constantemente.</p> <!--La etiqueta <p> (párrafo) contiene la descripción detallada del beneficio-->
+          </div> <!--Cierra el <div> de la primera tarjeta de beneficio-->
+        
+        <div class="benefit-card-col"> <!--Abre la segunda tarjeta de beneficio, igual que la anterior-->
+              <span class="benefit-icon-col">📈</span> <!--El <span> con el icono de la gráfica de crecimiento 📈-->
+              <h4>Mejor Rendimiento Académico</h4> <!--El título de la segunda tarjeta-->
+              <p>Se asimilan conceptos más complejos al explicarlos o debatirlos con otros.</p> <!--La descripción del segundo beneficio-->
+        </div> <!--Cierra el <div> de la segunda tarjeta-->
+        
+        <div class="benefit-card-col"> <!--Abre la tercera tarjeta de beneficio-->
+              <span class="benefit-icon-col">🌐</span> <!--El <span> con el icono del mundo 🌐-->
+              <h4>Preparación Profesional</h4> <!--El título de la tercera tarjeta-->
+              <p>Adquiere experiencia esencial para el mundo laboral, donde el trabajo en equipo es clave.</p> <!--La descripción del tercer beneficio-->
+        </div> <!--Cierra el <div> de la tercera tarjeta-->
+
+      </div> <!--Cierra el <div> que contiene la rejilla de beneficios ('benefits-grid-col')-->
+    </section> <!--Cierre de la etiqueta <section> (sección)-->
+
+    <section class="section-card-col"> <div class="reflection-box-col"> <span class="reflection-icon-col">💭</span> <h3>Pregunta de Colaboración</h3>
+        <p>¿Qué puedo hacer hoy para ser un miembro más activo y útil en mi equipo de trabajo o en mi aula?</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="funciones.js"></script>
+</body>
+
+</html>

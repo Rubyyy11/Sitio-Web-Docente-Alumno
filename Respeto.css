@@ -1,0 +1,378 @@
+/* ======================================= */
+/* VARIABLES Y ESTILOS BASE DEL DISEÑO     */
+/* ======================================= */
+
+/* Se definen variables globales para colores y sombras
+   que se pueden reutilizar en todo el documento */
+:root {
+    --color-fondo-principal: #f5f5f5; /* Fondo general claro */
+    --color-principal-oscuro: #515886; /* Azul/morado oscuro (base principal) */
+    --color-principal-claro: #7385ac; /* Tono intermedio para contraste */
+    --color-acento: #889ec4; /* Color decorativo para íconos o detalles */
+    --color-texto-claro: white; /* Texto claro (usado sobre fondos oscuros) */
+    --color-texto-oscuro: #333; /* Texto oscuro (usado sobre fondos claros) */
+    --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra genérica para tarjetas */
+}
+
+/* Estilo base del cuerpo del documento */
+body {
+    background-color: var(--color-fondo-principal); /* Usa el color definido arriba */
+    color: var(--color-texto-oscuro); /* Color del texto general */
+    font-family: Arial, sans-serif; /* Fuente base del sitio */
+}
+
+/* ======================================= */
+/* ESTILO DEL TÍTULO PRINCIPAL */
+/* ======================================= */
+
+.titulo-con-fondo {
+    /* Centrado y márgenes para dar efecto de separación visual */
+    text-align: center;
+    margin: -50px auto 30px auto; /* El valor negativo "sube" el elemento */
+    max-width: 90%; /* Limita el ancho del título */
+
+    /* Fondo con imagen decorativa */
+    background-image: url('FondoMenuLateral.jpg');
+    background-size: cover;
+    background-position: center;
+
+    /* Borde, esquinas y sombreado */
+    border: 1px solid rgb(23, 32, 49);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    /* Relleno interno */
+    padding: 10px 20px;
+
+    /* Asegura que se muestre sobre otros elementos */
+    position: relative;
+    z-index: 10;
+}
+
+/* ======================================= */
+/* Texto principal dentro del título */
+/* ======================================= */
+.card-title-main {
+    text-align: center; /* Centra el texto horizontalmente dentro del contenedor */
+    font-size: 25px; /* Tamaño de letra grande para destacar el título */
+    margin: 0; /* Elimina márgenes exteriores predeterminados */
+    padding: 0; /* Elimina relleno interno */
+    color: white; /* Texto blanco para crear contraste con el fondo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Añade sombra al texto para mejorar legibilidad sobre fondos oscuros o con imagen */
+    border-bottom: none; /* Quita cualquier línea inferior (si existía de un estilo anterior) */
+    display: block; /* Hace que el elemento ocupe todo el ancho disponible, útil para centrar y controlar posición */
+}
+
+/* ======================================= */
+/* Adaptación para pantallas pequeñas (Responsive Design) */
+/* ======================================= */
+@media (max-width: 800px) { 
+    /* Aplica estos estilos solo cuando el ancho de la pantalla sea menor o igual a 800px */
+    
+    .titulo-con-fondo {
+        max-width: 95%; /* Reduce un poco el ancho para que se ajuste mejor a pantallas pequeñas */
+        margin: -40px auto 20px auto; /* Ajusta los márgenes para mantener buena proporción visual */
+    }
+
+    .card-title-main {
+        font-size: 25px; /* Disminuye el tamaño de la fuente para que el texto no se vea demasiado grande */
+    }
+}
+
+/* ======================================= */
+/* CONTENEDOR PRINCIPAL Y SECCIONES        */
+/* ======================================= */
+
+.main-content-wrapper {
+    padding: 20px; /* Espaciado interno para que el contenido no toque los bordes */
+    max-width: 10000px; /* Ancho máximo muy grande, ideal para pantallas de escritorio amplias */
+    margin: 45px auto 20px auto; /* Margen superior para separar de la barra, centrado automático y margen inferior */
+}
+
+/* Cada sección del sitio (como “Introducción”, “Tipos”, etc.) se muestra como una tarjeta o bloque */
+.section-card {
+    background-color: var(--color-texto-claro); /* Fondo blanco o claro, según la variable */
+    border-radius: 20px; /* Bordes redondeados para suavizar el diseño */
+    box-shadow: var(--sombra-card); /* Sombra para dar efecto de elevación */
+    padding: 30px; /* Espaciado interno cómodo */
+    margin-bottom: 30px; /* Separación entre tarjetas */
+    border: 1px solid var(--color-principal-claro); /* Borde sutil con tono intermedio */
+}
+
+/* Estilo de los títulos dentro de cada sección (centrados y decorativos) */
+.section-title-deco {
+    text-align: center; /* Centra el texto del título */
+    font-size: 1.8em; /* Tamaño de fuente grande */
+    color: var(--color-principal-claro); /* Color acorde a la paleta */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    position: relative; /* Permite colocar los íconos ✨ antes y después con pseudo-elementos */
+}
+
+/* Agrega íconos o símbolos ✨ antes y después del texto del título */
+.section-title-deco::before,
+.section-title-deco::after {
+    content: "✨"; /* Caracter decorativo */
+    display: inline-block; /* Hace que se comporte como un elemento visual */
+    margin: 0 10px; /* Espacio entre el símbolo y el texto */
+    color: var(--color-acento); /* Color de acento para destacar */
+}
+
+/* ======================================= */
+/* SECCIÓN INTRODUCCIÓN (Estilo de Cabecera) */
+/* ======================================= */
+
+/* Contenedor flexible que organiza las cajitas y las imágenes en filas o columnas */
+.flex-container {
+    display: flex; /* Activa el modo flexbox (organiza los elementos en una misma línea) */
+    gap: 20px; /* Espacio entre las cajitas o imágenes */
+    flex-wrap: wrap; /* Permite que los elementos salten a otra fila si no caben (ideal para móvil) */
+}
+
+/* Cajita individual de información (como una mini-tarjeta de contenido) */
+.info-box {
+    flex: 1; /* Cada caja ocupa el mismo espacio posible dentro del contenedor */
+    min-width: 300px; /* Evita que se haga demasiado pequeña */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Esquinas redondeadas */
+    border: 2px solid var(--color-principal-oscuro); /* Borde con el color principal oscuro */
+    background-color: #e8ecf6; /* Color de fondo suave para destacar del fondo general */
+}
+
+/* Pequeño título que sobresale por encima de la caja */
+.box-title-small {
+    background-color: var(--color-principal-claro); /* Fondo del título con color intermedio */
+    color: var(--color-texto-claro); /* Texto blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Permite que ocupe solo el ancho de su contenido */
+    margin-top: -30px; /* Hace que “salga” un poco del borde superior de la caja */
+    margin-bottom: 10px; /* Espacio entre el título y el texto */
+    font-size: 1.2em; /* Tamaño de fuente ligeramente mayor */
+}
+
+/* Contenedor que centra una imagen decorativa (por ejemplo, ilustraciones o gráficos) */
+.image-deco-container {
+    text-align: center; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Separa la imagen del contenido superior */
+}
+
+/* Imagen decorativa con borde y sombra */
+.imagen-decorativa {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción original */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 5px solid var(--color-principal-oscuro); /* Borde con el color principal */
+    box-shadow: var(--sombra-card); /* Sombra para darle efecto de elevación */
+}
+
+/* ======================================= */
+/* SECCIÓN TIPOS (Ventajas/Desventajas o Áreas) */
+/* ======================================= */
+
+/* Contenedor principal que divide el contenido en dos columnas (como ventajas y desventajas) */
+.split-table {
+    display: flex; /* Organiza los elementos hijos (columnas) uno al lado del otro */
+    border: 5px solid var(--color-principal-oscuro); /* Borde grueso y destacado alrededor del contenedor */
+    border-radius: 20px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que los elementos sobresalgan del borde redondeado */
+    flex-wrap: wrap; /* Permite que las columnas se acomoden en varias filas en pantallas pequeñas */
+}
+
+/* Cada columna dentro del contenedor */
+.split-column {
+    flex: 1; /* Ambas columnas ocupan el mismo espacio disponible */
+    padding: 20px; /* Espaciado interno */
+    min-width: 45%; /* Evita que las columnas sean demasiado estrechas */
+}
+
+/* Encabezado dentro de cada columna */
+.column-header {
+    text-align: center; /* Centra el texto */
+    color: var(--color-texto-claro); /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+    margin: -20px -20px 20px -20px; /* Expande el encabezado hacia los bordes de la caja */
+    font-size: 1.3em; /* Tamaño de letra más grande */
+    font-weight: bold; /* Negritas para destacar */
+}
+
+/* Columna principal (por ejemplo, ventajas o puntos positivos) */
+.column-positive {
+    background-color: #e9ebf8; /* Fondo suave */
+    border-right: 5px solid var(--color-principal-oscuro); /* Línea divisoria entre columnas */
+}
+
+/* Encabezado dentro de la columna positiva */
+.column-positive .column-header {
+    background-color: var(--color-principal-oscuro); /* Fondo oscuro para resaltar el título */
+}
+
+/* Columna secundaria (por ejemplo, desventajas o áreas de aplicación) */
+.column-areas {
+    background-color: #e3f2fd; /* Fondo diferente para distinguirla */
+}
+
+/* Encabezado dentro de la columna secundaria */
+.column-areas .column-header {
+    background-color: var(--color-principal-oscuro); /* Mismo color que el encabezado de la otra columna */
+}
+
+/* Elementos individuales dentro de cada columna (como listas o puntos destacados) */
+.item-card {
+    display: flex; /* Organiza ícono + texto en una misma línea */
+    gap: 15px; /* Espacio entre ícono y texto */
+    margin-bottom: 15px; /* Espacio entre ítems */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px dashed var(--color-principal-claro); /* Línea divisoria discontinua debajo de cada ítem */
+    align-items: flex-start; /* Alinea los ítems arriba para mantener consistencia visual */
+}
+
+/* Ícono decorativo que acompaña cada punto o elemento */
+.icon-deco {
+    font-size: 2em; /* Tamaño grande del ícono */
+    color: var(--color-principal-oscuro); /* Color principal oscuro */
+    flex-shrink: 0; /* Evita que el ícono se reduzca cuando hay poco espacio */
+}
+
+/* Subtítulo o título pequeño dentro de cada ítem */
+.item-card h4 {
+    color: var(--color-principal-oscuro); /* Mismo color del esquema */
+    margin: 0; /* Quita el margen predeterminado */
+    font-size: 1.1em; /* Tamaño de texto moderado */
+}
+
+/* ======================================= */
+/* SECCIÓN IMPORTANCIA                     */
+/* ======================================= */
+
+/* ======================================= */
+/* SECCIÓN DE IMPORTANCIA (texto + imagen) */
+/* ======================================= */
+
+/* Contenedor flexible que distribuye el texto (lista) y la imagen de forma equilibrada */
+.importance-grid {
+    display: flex;             /* Coloca elementos en fila (texto e imagen uno al lado del otro) */
+    gap: 30px;                 /* Espacio entre el texto y la imagen */
+    align-items: center;       /* Centra verticalmente ambos elementos */
+    flex-wrap: wrap;           /* Permite que se acomoden uno debajo del otro en pantallas pequeñas */
+}
+
+/* Recuadro que contiene la lista de puntos */
+.bullet-list-box {
+    flex: 2;                   /* Ocupa más espacio que la imagen (2 partes del total del contenedor) */
+    padding: 20px;             /* Espaciado interno */
+    border-radius: 10px;       /* Bordes redondeados */
+    border: 2px solid var(--color-principal-claro); /* Borde con color de la paleta principal */
+    background-color: #e5e6f5; /* Fondo suave lila o azul grisáceo */
+}
+
+/* Quita las viñetas estándar y el padding por defecto */
+.bullet-list-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Cada elemento de la lista con margen y espacio para el ícono */
+.bullet-list-box li {
+    padding-left: 20px;        /* Espacio para colocar el ícono ✔️ */
+    position: relative;
+    margin-bottom: 10px;       /* Espaciado entre líneas */
+    color: var(--color-texto-oscuro); /* Usa color del tema para el texto */
+}
+
+/* Ícono de check personalizado antes de cada elemento */
+.bullet-list-box li::before {
+    content: "✔️";             /* Ícono decorativo */
+    position: absolute;
+    left: 0;                   /* Se coloca justo antes del texto */
+    color: var(--color-acento); /* Usa el color de acento del tema */
+}
+
+/* Imagen circular decorativa al lado del texto */
+.imagen-importancia {
+    flex: 1;                   /* Ocupa menos espacio que el texto */
+    min-width: 250px;          /* Tamaño mínimo para evitar que se deforme en móvil */
+    max-width: 400px;          /* Tamaño máximo para mantener proporción */
+    height: auto;              /* Se ajusta al ancho automáticamente */
+    border-radius: 50%;        /* La hace circular */
+    border: 8px solid var(--color-principal-oscuro); /* Borde grueso */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave para darle relieve */
+}
+
+/* ======================================= */
+/* EXTRAS OPCIONALES                       */
+/* ======================================= */
+
+/* Cita o frase inspiradora */
+.quote-inspiration {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.4em;
+    color: var(--color-principal-oscuro);
+    padding: 20px;
+    border: 1px dashed var(--color-acento);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Recuadro final de reflexión */
+.reflection-box {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-texto-claro);
+    border-radius: 15px;
+    box-shadow: var(--sombra-card);
+}
+
+/* Título dentro del cuadro de reflexión */
+.reflection-box h3 {
+    margin-top: 0;
+    color: var(--color-acento);
+}
+
+/* Ícono dentro del cuadro de reflexión */
+.reflection-box .icon-deco {
+    font-size: 3em;
+    color: var(--color-acento);
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL                      */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        padding: 10px;
+    }
+
+    /* Coloca los elementos en columna para móvil */
+    .flex-container,
+    .split-table,
+    .importance-grid {
+        flex-direction: column;
+    }
+
+    .info-box {
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .split-column {
+        min-width: 100%;
+        border-right: none;
+        border-bottom: 5px solid var(--color-principal-oscuro);
+    }
+
+    .column-areas {
+        border-bottom: none; /* Eliminar borde inferior de la última columna */
+    }
+
+    .column-header {
+        margin-top: 0;
+    }
+
+    .imagen-importancia {
+        order: -1; /* Mueve la imagen arriba en versión móvil */
+        max-width: 100%;
+    }
+}
