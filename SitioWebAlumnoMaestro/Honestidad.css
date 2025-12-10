@@ -1,0 +1,300 @@
+/* ======================================= */
+/* PALETA DE COLORES (Azules Grisáceos - Honestidad) */
+/* ======================================= */
+/* Oscuro: #515886 | Intermedio: #7385ac | Acento: #889ec4 */
+/* Fondo Suave: #e8ecf6 */
+
+:root {
+    --color-h-oscuro: #515886;         /* Azul marino oscuro */
+    --color-h-intermedio: #7385ac;     /* Azul grisáceo intermedio */
+    --color-h-acento: #889ec4;        /* Azul claro de acento */
+    --color-h-fondo-suave: #e8ecf6;    /* Fondo muy claro */
+    --color-h-texto: #333;             /* Texto general */
+}
+
+/* ======================================= */
+/* ESTILOS GLOBALES Y ENCAPSULAMIENTO */
+/* ======================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding: 0 40px; 
+    max-width: 10000px;
+    margin: 0 auto;
+}
+
+/* Base de encapsulamiento: Tarjeta con sutil sombreado */
+.section-card-h {
+    background-color: white;
+    border: 1px solid var(--color-h-fondo-suave);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin: 40px 0; 
+}
+
+.section-title-h {
+    text-align: center;
+    font-size: 2em;
+    color: var(--color-h-oscuro);
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--color-h-acento);
+}
+
+/* ======================================= */
+/* SECCIÓN 1: ENCABEZADO */
+/* ======================================= */
+
+.hero-section-h {
+    position: relative;
+    background-image: url(FondoMenuLateral.jpg); 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 40px; 
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    margin-top: 0; 
+}
+
+.overlay-h {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(81, 88, 134, 0.75); 
+}
+
+.hero-content-h {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content-h h1 {
+    font-size: 2.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================= */
+/* SECCIÓN 2: DEFINICIÓN (Layout con imagen y cita) */
+/* ======================================= */
+
+.definition-section-h {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.definition-box-h {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    padding-right: 20px;
+}
+
+.image-quote-h {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.image-deco-h {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--color-h-oscuro); /* Marco de color oscuro */
+}
+
+.cita-h {
+    font-style: italic;
+    color: var(--color-h-intermedio);
+    margin-top: 15px;
+    padding: 10px;
+    border-left: 5px solid var(--color-h-acento);
+    text-align: left;
+    display: block;
+}
+
+/* ======================================= */
+/* SECCIÓN 3: MANIFESTACIONES (Diseño de tarjeta flotante) */
+/* ======================================= */
+
+.manifest-section-h {
+    background-color: var(--color-h-fondo-suave);
+    padding: 50px 40px;
+    margin-top: 0; /* Se pega a la sección anterior */
+    border-radius: 0;
+    text-align: center;
+}
+
+.manifest-grid-h {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.manifest-card-h {
+    background: white;
+    border-radius: 15px;
+    width: 300px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de borde dinámico para la Honestidad */
+.manifest-card-h::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-h-acento);
+    transition: transform 0.4s ease-out;
+    transform: translateY(-5px); /* Oculto arriba */
+}
+
+.manifest-card-h:hover::before {
+    transform: translateY(0);
+}
+
+.manifest-card-h:hover {
+    box-shadow: 0 10px 20px rgba(81, 88, 134, 0.2);
+    transform: translateY(-5px);
+}
+
+.manifest-icon-h {
+    font-size: 3em;
+    color: var(--color-h-oscuro);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.manifest-card-h h3 {
+    color: var(--color-h-intermedio);
+    margin-top: 0;
+}
+
+/* ======================================= */
+/* SECCIÓN 4: IMPORTANCIA (Checklist estructurado) */
+/* ======================================= */
+
+.importance-list-h {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+
+.check-item-h {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--color-h-fondo-suave);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 6px solid var(--color-h-intermedio);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.check-icon-h {
+    font-size: 1.5em;
+    color: var(--color-h-oscuro);
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.check-item-h p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.check-item-h p strong {
+    color: var(--color-h-oscuro);
+}
+
+
+/* ======================================= */
+/* SECCIÓN 5: REFLEXIÓN */
+/* ======================================= */
+.reflection-section-h {
+    background-color: var(--color-h-oscuro);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0; /* Se pega al final */
+    border-radius: 0;
+}
+
+.reflection-section-h p {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.reflection-cta-h {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-h-acento);
+    color: var(--color-h-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.reflection-cta-h:hover {
+    background-color: white;
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0 15px;
+    }
+    .hero-section-h {
+        height: 220px;
+        border-radius: 0 0 30px 30px;
+    }
+    .hero-content-h h1 {
+        font-size: 2em;
+    }
+    .definition-section-h {
+        flex-direction: column;
+    }
+    .definition-box-h {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .image-quote-h {
+        min-width: 100%;
+    }
+    .manifest-grid-h {
+        flex-direction: column;
+        align-items: center;
+    }
+    .manifest-card-h {
+        width: 100%;
+        max-width: 400px;
+    }
+}

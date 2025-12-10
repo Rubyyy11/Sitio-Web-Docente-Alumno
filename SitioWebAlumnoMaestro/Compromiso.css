@@ -1,0 +1,337 @@
+:root {
+    --color-c-oscuro: #515886;         /* Azul marino oscuro */
+    --color-c-intermedio: #7385ac;     /* Azul grisáceo intermedio */
+    --color-c-acento: #889ec4;        /* Azul claro de acento */
+    --color-c-fondo-suave: #e8ecf6;    /* Fondo muy claro */
+    --color-c-texto: #333;             /* Texto general */
+}
+
+/* ======================================= */
+/* ESTILOS GLOBALES Y ENCAPSULAMIENTO */
+/* ======================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding: 0 40px; 
+    max-width: 10000px;
+    margin: 0 auto;
+}
+
+/* Base de encapsulamiento: Tarjeta con borde sólido y sombreado */
+.section-card-c {
+    background-color: white;
+    border: 2px solid var(--color-c-intermedio); /* Borde de color intermedio */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.section-title-c {
+    text-align: center;
+    font-size: 2em;
+    color: var(--color-c-oscuro);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-c-acento);
+}
+
+.section-title-c-alt {
+    text-align: center;
+    font-size: 2em;
+    color: white; /* Título blanco para la sección oscura */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-c-acento);
+}
+
+/* ======================================= */
+/* SECCIÓN 1: ENCABEZADO */
+/* ======================================= */
+
+.hero-section-c {
+    position: relative;
+    background-image: url(FondoMenuLateral.jpg); 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 40px; 
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    margin-top: 0; 
+}
+
+.overlay-c {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(81, 88, 134, 0.75); 
+}
+
+.hero-content-c {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content-c h1 {
+    font-size: 2.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================= */
+/* SECCIÓN 2: DEFINICIÓN (Doble Borde) */
+/* ======================================= */
+
+.definition-section-c {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* Efecto de doble borde */
+    border: 5px double var(--color-c-oscuro); 
+    padding: 40px;
+    transition: box-shadow 0.3s;
+}
+
+.definition-section-c:hover {
+    box-shadow: 0 10px 25px rgba(81, 88, 134, 0.3);
+}
+
+.definition-box-c {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    padding-right: 20px;
+}
+
+.image-side-c {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.image-deco-c {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Imagen redonda para diferenciar */
+    box-shadow: 0 0 0 8px var(--color-c-acento), 0 0 0 12px var(--color-c-intermedio); /* Anillos de acento */
+    object-fit: cover;
+}
+
+.cita-c {
+    font-style: italic;
+    color: var(--color-c-oscuro);
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 2px dashed var(--color-c-intermedio);
+}
+
+/* ======================================= */
+/* SECCIÓN 3: ÁREAS DE COMPROMISO (Diseño de Proceso/Flechas) */
+/* ======================================= */
+
+.areas-section-c {
+    background-color: var(--color-c-fondo-suave);
+    text-align: center;
+}
+
+.process-container-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.process-item-c {
+    width: 350px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-top: 5px solid var(--color-c-intermedio);
+}
+
+.step-number-c {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-c-acento);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-c {
+    font-size: 3em;
+    color: var(--color-c-oscuro);
+    font-weight: bold;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.process-item-c h3 {
+    color: var(--color-c-oscuro);
+    margin-top: 10px;
+}
+
+/* ======================================= */
+/* SECCIÓN 4: BENEFICIOS (Paneles Inclinados) */
+/* ======================================= */
+
+.benefits-section-c {
+    background-color: var(--color-c-oscuro);
+    color: white;
+    padding: 50px 40px;
+    margin: 0;
+    border-radius: 0;
+    text-align: center;
+}
+
+.benefits-grid-c {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.benefit-card-c {
+    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    transition: background 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Transformación de inclinación para el diseño de "solidez" */
+    transform: skewX(-5deg); 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-card-c:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-5deg) scale(1.03);
+}
+
+.benefit-card-c * {
+    transform: skewX(5deg); /* Contrarresta la inclinación del contenedor */
+}
+
+.benefit-icon-c {
+    font-size: 3em;
+    color: var(--color-c-acento);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.benefit-card-c h3 {
+    color: var(--color-c-acento);
+    margin-top: 0;
+}
+
+
+/* ======================================= */
+/* SECCIÓN 5: REFLEXIÓN */
+/* ======================================= */
+
+.reflection-section-c {
+    text-align: center;
+    background-color: white;
+    border: none; /* Quitamos el borde de la tarjeta para usar solo la sombra */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.reflection-box-c p {
+    font-size: 1.3em;
+    color: var(--color-c-oscuro);
+    margin-bottom: 20px;
+}
+
+.action-btn-c {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--color-c-intermedio);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn-c:hover {
+    background-color: var(--color-c-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL */
+/* ======================================= */
+
+@media (max-width: 900px) {
+    .arrow-c {
+        display: none;
+    }
+    .process-container-c {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0 15px;
+    }
+    .hero-section-c {
+        height: 220px;
+        border-radius: 0 0 30px 30px;
+    }
+    .hero-content-c h1 {
+        font-size: 2em;
+    }
+    .definition-section-c {
+        flex-direction: column;
+    }
+    .definition-box-c {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .image-side-c {
+        min-width: 100%;
+    }
+    .image-deco-c {
+        max-width: 250px;
+    }
+    .benefits-grid-c {
+        gap: 20px;
+    }
+    .benefit-card-c {
+        width: 100%;
+        max-width: none;
+        transform: skewX(0); /* Deshace la inclinación en móvil */
+    }
+    .benefit-card-c * {
+        transform: skewX(0); 
+    }
+}

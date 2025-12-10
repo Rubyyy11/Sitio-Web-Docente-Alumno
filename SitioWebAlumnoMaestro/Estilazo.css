@@ -1,0 +1,367 @@
+html,
+body {
+  background-image: url(HojaDePuntitos.jpg);
+}
+
+
+/*Barra de arriba de navegación---------------------------------------------------*/
+nav {
+  background-image: url("BackgroundDeBarraDeNavegacion.jpg"); /*Imagen de fondo*/
+  overflow: hidden; /*Evita que se salga de la barrita de navegación*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*Le da sombra a los botones para que parezca que tiene relieve*/
+  display: flex; /*Ajustamiento felxible del tamaño*/
+  gap: 20px; /*Espacio entre botones*/
+  padding: 10px; /*Separación interna*/
+}
+
+/* Letras y estilo de los botones */
+nav a {
+  display: inline-block;  /*Para que los botones estén en una sola linea*/
+  color: rgb(255, 255, 255);
+  text-align: center; /*texto alineado al centro*/
+  padding: 14px 20px; /*Espaciado interno*/
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 30px; /*Redondea los bordes de los botones*/
+  /*bordes redondeados*/
+  background: linear-gradient(135deg, #6d80bd, #2e3864, #474b85); /*colores degradados en distintas tonalidades*/
+  box-shadow: inset 1px 1px 4px rgb(159, 211, 250), /*Da efecto de relieve (una parte brillante y una sombra)*/
+    2px 2px 6px rgba(0, 0, 0, 0.3);
+  /* efecto de relieve iluminado*/
+  transition: all 0.3s ease; /*Duración de lo que tardará en moverse el botón cuando se de click */
+  font-weight: 500;
+  border: 2px solid rgb(37, 41, 70);
+
+}
+
+/* tono más fuerte al pasar el mouse */
+nav a:hover {
+  background: linear-gradient(135deg, #8ba2ee, #4d5da7, #6c72c5);
+  transform: translateY(-3px); /* leve elevación */
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4); /*La sombra del botón al elevarse*/
+}
+
+/*BANNER----------------------------------------------------------------------*/
+.banner {
+  background-image: url("FondoBannerWeb.jpg");
+  background-size: cover; /*pa cubrir toda el aréa*/
+  background-position: center; /*centrar el banner*/
+  height: 270px; /*Altura del banner*/
+  display: flex; /*Ajuste flexible de los tamaños*/
+  justify-content: center; /*Contenido al centro*/
+  align-items: center; /*items centrados*/
+  text-align: center; /*Texto centrado*/
+}
+
+/*fondo de la parte superior*/
+body {
+  font-family: "Poppins", sans-serif; /*fuente de texto*/
+  margin: 0; /*sin margen*/
+}
+
+.texto-del-banner h1 {
+  color: #ffffff;
+  /*color de la letra*/
+  font-size: 30px;
+  margin-top: 30px; /*Margen de arriba del texto h1*/
+  margin-bottom: 0px; /*Margen de abajo para que h2 quede junto a h1*/
+}
+
+.texto-del-banner h2 {
+  color: #ffffff;
+  /*color de la letra*/
+  font-size: 50px; /*tamaño de la letra*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*------------------------------------------------------*/
+
+.contenido h3 {
+  text-align: center;
+  color: #000000;
+  font-size: 27px;
+}
+
+.contenido p {
+  font-size: 23px;
+  text-align: justify;
+  color: #000000;
+}
+
+.contenido {
+  padding: 15px 35px;
+}
+
+/*CRÉDITOS DE IMAGENES----------------------------------------*/
+.CreditosDeImagenes {
+  padding: 15px 35px; /*Espaciado de arriba/abajo y de los lados*/
+}
+
+.CreditosDeImagenes h1 {
+  color: #ffffff;
+  font-size: 27px; /*Tamaño de la letra*/
+}
+
+.CreditosDeImagenes p {
+  font-size: 20px;
+  color: white;
+}
+
+
+/*SalonDeClases.jpg------------------------------------------------------*/
+.imagenSalon {
+  width: 55%;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto suave al pasar el mouse */
+.imagenSalon:hover {
+  transform: scale(1.06);
+}
+
+/*-------------------------------------------------------------------*/
+
+
+/* Contenedor general: imágenes + cuadro ----------------------------------*/
+.contenedor-cuadro {
+  display: flex;
+  align-items: stretch; /* las imágenes y el cuadro tendrán la misma altura */
+  justify-content: center;
+  gap: 40px; /* separación entre imágenes y cuadro */
+  margin: 60px auto;
+  max-width: 1700px; /* aprovecha más el ancho de la pantalla */
+  flex-wrap: nowrap; /* evita que los elementos bajen de línea */
+}
+
+/* Imágenes laterales */
+.lado-izquierdo,
+.lado-derecho {
+  flex: 1 1 30%; /* Ocupan el 30% del ancho disponible y pueden ajustarse */
+  max-width: 380px; /* Ancho máximo permitido para las imágenes */
+  height: auto; /* Mantiene la proporción original */
+  border-radius: 15px; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen sin deformarla, llenando el espacio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves en hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera debajo */
+}
+
+/* Efecto suave al pasar el mouse sobre las imágenes */
+.lado-izquierdo:hover,
+.lado-derecho:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Intensifica la sombra */
+}
+
+/* Cuadro central */
+.cuadro {
+  flex: 1 1 40%; /* Ocupa el 40% del espacio central */
+  border-radius: 25px; /* Bordes redondeados del cuadro */
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Sombra alrededor del cuadro */
+  background-color: #ffffff; /* Fondo blanco */
+  border: 2.5px solid rgb(37, 41, 70); /* Borde decorativo en tono oscuro */
+  min-width: 400px; /* Evita que el cuadro se reduzca demasiado */
+}
+
+/* Parte superior: título con fondo */
+.titulo-cuadro {
+  background-image: url(FondoMenuLateral.jpg); /* Imagen de fondo para el título */
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.5),
+    2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombras internas y externas */
+  color: white; /* Texto en color blanco */
+  text-align: center; /* Centra el texto */
+  padding: 10px 0; /* Espaciado interno vertical */
+  font-size: 24px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negritas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Parte inferior: texto dentro del cuadro */
+.contenido-cuadro {
+  padding: 20px 30px; /* Espaciado interno */
+  text-align: justify; /* Justifica el texto */
+  color: #333; /* Color gris oscuro */
+  line-height: 1.6; /* Altura entre líneas */
+  font-size: 18px; /* Tamaño del texto */
+}
+
+/* Ajuste para pantallas pequeñas (modo responsive) */
+@media (max-width: 950px) {
+  .contenedor-cuadro {
+    flex-direction: column; /* Cambia la disposición a vertical */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .lado-izquierdo,
+  .lado-derecho {
+    max-width: 90%; /* Imágenes ocupan casi todo el ancho */
+  }
+
+  .cuadro {
+    width: 90%; /* El cuadro se adapta al ancho disponible */
+  }
+}
+
+
+
+.cuadro {
+  width: 80%; /*Ancho de un 80%*/
+  max-width: 900px; /*Ancho máximo de 900pixeles*/
+  margin: 40px auto; /* centra el cuadro */
+  border-radius: 25px; /*Borde redondeado de las esquinas*/
+  overflow: hidden; /*Para que ningún item se salga del cuadro y para que el borde redondeado también afecte al título */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /*Sombrita para el cuadro*/
+  background-color: #ffffff; /*Color blanco para el fondo*/
+  border: 2.5px solid rgb(37, 41, 70); /*Borde o delineado exterior del cuadro*/
+}
+
+/* Parte superior: título con degradado */
+.titulo-cuadro {
+  background-image: url(FondoMenuLateral.jpg); /* Imagen de fondo para el título (puede simular un degradado o textura) */
+  
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.5),
+    2px 2px 6px rgba(0, 0, 0, 0.3); 
+  /* Sombra interna (inset) para dar brillo desde adentro 
+     y sombra externa para crear un ligero relieve visual */
+  
+  color: white; /* Color del texto del título */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 0.1px 0; /* Espaciado interno mínimo arriba y abajo (puede ajustarse) */
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Hace que el texto sea más grueso (negritas) */
+  letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+}
+
+/* Parte inferior: texto del contenido principal del cuadro */
+.contenido-cuadro {
+  padding: 15px 30px; /* Espaciado interno: 15px arriba/abajo y 30px a los lados */
+  text-align: justify; /* Justifica el texto para que ocupe todo el ancho disponible */
+  color: #333; /* Color del texto, un gris oscuro para buena lectura */
+  line-height: 1.6; /* Altura de línea (separación entre renglones) para mejorar legibilidad */
+  font-size: 18px; /* Tamaño de la fuente del texto */
+  background-color: #ffffff; /* Fondo blanco para el área del texto */
+}
+
+/* Estilo para texto en cursiva dentro del contenido */
+.contenido-cuadro i {
+  color: #757292; /* Cambia el color de la cursiva a un tono gris violáceo más elegante */
+}
+
+/*-----------------------------------------------------------------------------*/
+/* --- CONFIGURACIÓN DE LA BARRA SUPERIOR --- */
+nav {
+  background-image: url("BackgroundDeBarraDeNavegacion.jpg"); /* Imagen de fondo para la barra de navegación */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra para dar profundidad */
+  display: flex; /* Usa flexbox para organizar los elementos dentro de la barra */
+  justify-content: space-between; /* Separa los elementos: uno a la izquierda y otro a la derecha */
+  align-items: center; /* Centra verticalmente los elementos dentro de la barra */
+  padding: 10px 20px; /* Espaciado interno arriba/abajo (10px) y a los lados (20px) */
+}
+
+/* Botón ☰ (icono del menú lateral o hamburguesa) */
+.menu-btn {
+  font-size: 26px; /* Tamaño del ícono o texto del botón */
+  background: linear-gradient(135deg, #6d80bd, #2e3864, #474b85); /* Fondo con degradado diagonal */
+  box-shadow: inset 1px 1px 4px rgb(159, 211, 250), /* Sombra interna para efecto de brillo */
+    2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra externa para relieve */
+  color: white; /* Color del icono o texto del botón */
+  border: 2px solid rgb(37, 41, 70); /* Borde sólido azul oscuro */
+  border-radius: 50%; /* Forma circular para el botón */
+  padding: 8px 14px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambia el cursor a "mano" al pasar el mouse */
+  transition: 0.3s; /* Transición suave para los efectos de hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón del menú */
+.menu-btn:hover {
+  background: linear-gradient(135deg, #8ba2ee, #4d5da7, #6c72c5); /* Cambia el degradado a tonos más claros */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Contenedor de los botones que van a la derecha de la barra */
+.nav-right {
+  display: flex; /* Usa flexbox para organizar los botones en fila */
+  gap: 15px; /* Espacio de 15px entre cada botón o elemento */
+}
+
+/* --- MENÚ LATERAL IZQUIERDO --- */
+.side-menu {
+  height: 100%; /* El menú ocupa toda la altura de la pantalla */
+  width: 0; /* Ancho inicial: 0 (oculto hasta que se abra con JS) */
+  /* inicialmente cerrado */
+  position: fixed; /* Fija el menú en una posición constante, aunque se haga scroll */
+  top: 0; /* Comienza desde la parte superior de la pantalla */
+  left: 0; /* Se alinea completamente al lado izquierdo */
+  background-image: url(FondoMenuLateral.jpg); /* Imagen de fondo del menú */
+  overflow-x: hidden; /* Evita que aparezca una barra de desplazamiento horizontal */
+  transition: width 0.4s ease; /* Efecto suave al abrir o cerrar el menú */
+  padding-top: 60px; /* Deja un espacio arriba antes de que empiecen los enlaces */
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.4); /* Sombra al borde derecho del menú para dar profundidad */
+  z-index: 999; /* Hace que el menú quede por encima de otros elementos */
+  border-top-right-radius: 15px; /* Redondea la esquina superior derecha */
+  border-bottom-right-radius: 15px; /* Redondea la esquina inferior derecha */
+  /*border-right: 3px solid #101533; /* Borde vertical derecho (color azul oscuro) */
+}
+
+
+/* Links del menú lateral */
+.side-menu a {
+  display: block; /* Cada enlace ocupa toda una línea (bloque completo) */
+  color: white; /* Color del texto de los enlaces */
+  padding: 15px 25px; /* Espaciado interno (arriba/abajo 15px, lados 25px) */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  font-size: 18px; /* Tamaño de letra del enlace */
+  transition: background 0.3s, padding-left 0.3s; /* Transiciones suaves para el color de fondo y movimiento */
+}
+
+/* Efecto cuando el usuario pasa el mouse sobre un enlace */
+.side-menu a:hover {
+  background: #101533; /* Cambia el color de fondo del enlace */
+  padding-left: 35px; /* Mueve el texto hacia la derecha para dar efecto de desplazamiento */
+}
+
+/* --- NUEVO: ÍCONO ☰ DENTRO DEL MENÚ PARA CERRAR --- */
+.side-menu .close-btn {
+  position: absolute; /* Posiciona el ícono de forma fija dentro del menú */
+  top: 15px; /* Distancia desde la parte superior del menú */
+  left: 20px; /* Distancia desde el borde izquierdo */
+  font-size: 26px; /* Tamaño del ícono (grande para ser visible) */
+  color: white; /* Color blanco del ícono */
+  cursor: pointer; /* Cambia el cursor a "mano" para indicar que se puede hacer clic */
+  transition: transform 0.3s ease; /* Transición suave para animación al girar */
+}
+
+/* Efecto al pasar el mouse sobre el botón de cerrar */
+.side-menu .close-btn:hover {
+  transform: rotate(90deg); /* Gira el ícono 90° al pasar el mouse */
+}
+
+/* --- Para pantallas pequeñas --- */
+@media (max-width: 700px) {
+  .nav-right {
+    display: none; /* Oculta los botones de la derecha para simplificar la vista en móviles */
+  }
+}
+
+/*------------------------------------------------------*/
+/* Texto en la BARRA entre el icono y los botones de la derecha */
+.nav-title {
+  color: white; /* Color del texto del título */
+  font-size: 25px; /* Tamaño de fuente del título */
+  font-weight: 600; /* Grosor medio del texto (un poco más grueso) */
+  letter-spacing: 1px; /* Espaciado entre letras para mejor legibilidad */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra para resaltar el texto sobre fondos oscuros */
+  flex: 1; /* Hace que el título ocupe el espacio central del nav */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* En pantallas pequeñas, el texto del título se ajusta */
+@media (max-width: 700px) {
+  .nav-title {
+    font-size: 18px; /* Reduce el tamaño del texto para pantallas pequeñas */
+  }
+}

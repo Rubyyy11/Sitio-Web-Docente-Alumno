@@ -1,0 +1,291 @@
+/* ======================================= */
+/* PALETA DE COLORES (Azules Grisáceos Directos) */
+/* ======================================= */
+/* Oscuro: #515886 | Intermedio: #7385ac | Acento: #889ec4 */
+
+/* ======================================= */
+/* DISEÑO BASE DE LA PÁGINA VALORES HUMANOS */
+/* ======================================= */
+/* ======= HERO / ENCABEZADO ======= */
+
+body {
+    margin:0;
+}
+
+.hero-section {
+  position: relative;
+  background-image: url(FondoMenuLateral.jpg);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.main-content-vh {
+    padding: 25px;
+    max-width: 10000px;
+}
+
+.section-card-vh {
+    background-color: white;
+    border: 2px solid #7385ac;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.section-title-vh {
+    text-align: center;
+    font-size: 2em;
+    color: #515886;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #889ec4;
+}
+
+/* --- Definición --- */
+.definition-vh p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+.cita-vh {
+    font-style: italic;
+    text-align: center;
+    color: #7385ac;
+    margin-top: 15px;
+    border-left: 5px solid #515886;
+    padding-left: 15px;
+}
+
+/* ======================================= */
+/* RUEDA DE VALORES (FINAL: GIRO, TAMAÑO Y POSICIÓN DEL TEXTO) */
+/* ======================================= */
+
+/* Animación de giro lento y constante */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Animación de contragiro para el contenido */
+@keyframes counter-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.wheel-container-vh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 60px;
+    overflow: hidden;
+}
+
+/* Base de la rueda: Contiene el anillo exterior y el centro */
+.wheel-base-vh {
+    /* DEFINICIÓN DE TAMAÑOS CLAVE */
+    --wheel-size: 750px; /*Tamaño del borde azul*/
+    --inner-size: 350px; /*Tamaño del circulo central azul*/
+    --item-size: 200px; /*Circulos tamaño*/
+    --translation-distance: 360px; /* Distancia del centro a la ficha */
+    
+    width: var(--wheel-size);
+    height: var(--wheel-size);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #e8ecf6;
+    border: 5px solid #7385ac;
+}
+
+.wheel-inner-circle-vh {
+    width: var(--inner-size);
+    height: var(--inner-size);
+    background-color: #515886;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    z-index: 2;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Anillo exterior: El contenedor que GIRA */
+.wheel-outer-ring-vh {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: center; 
+    animation: spin 50s linear infinite; 
+}
+
+/* --- Posicionamiento de cada Valor (wheel-item-vh) --- */
+.wheel-item-vh {
+    --total-items: 10;
+    --item-index: var(--i);
+    --angle: calc((var(--item-index) - 1) * (360deg / var(--total-items)));
+    
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    
+    transform: 
+        rotate(var(--angle)) 
+        translate(var(--translation-distance)) 
+        translate(-50%, -50%); /* Centra el ítem en el punto de traslación */
+        
+    transform-origin: 0 0; 
+    
+    width: var(--item-size);
+    height: var(--item-size);
+}
+
+/* --- Contenido de la ficha (item-content-vh) --- */
+.item-content-vh {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    background-color: #889ec4; /*Borde de cada circulo*/
+    border: 4px solid rgb(80, 88, 116);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Aplica el contragiro */
+    animation: counter-spin 50s linear infinite; 
+    transform-origin: center;
+}
+
+/* >>> MODIFICACIÓN CLAVE: CENTRADO DE TEXTO Y ELIMINACIÓN DE FONDO <<< */
+.value-name-vh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa todo el círculo */
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white; /* Color del texto */
+    /* ELIMINACIÓN DEL FONDO NEGRO Y EL PADDING SUPERIOR */
+    background-color: transparent; 
+    padding: 0;
+    z-index: 5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra para que se lea sobre la imagen */
+    
+    /* CENTRADO PERFECTO DEL TEXTO */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    line-height: 1.2; /* Espaciado entre líneas si el valor ocupa dos líneas (ej. Comunicación Asertiva) */
+    
+    /* Eliminación de bordes redondeados */
+    border-radius: 50%; 
+}
+
+.item-content-vh img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; /* Hacemos la imagen 100% visible */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* --- Importancia (se mantiene) --- */
+.importance-grid-vh {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.importance-item-vh {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f7f9fc;
+    border-left: 5px solid #7385ac;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.importance-item-vh h3 {
+    color: #515886;
+    margin-top: 0;
+    border-bottom: 1px dotted #889ec4;
+    padding-bottom: 5px;
+}
+
+.imp-icon-vh {
+    font-size: 2em;
+    color: #889ec4;
+    float: right;
+    margin-left: 10px;
+}
+
+/* ======================================= */
+/* RESPONSIVE / MÓVIL                      */
+/* ======================================= */
+
+@media (max-width: 650px) {
+    .main-content-vh {
+        padding: 10px;
+    }
+    .wheel-base-vh {
+        --wheel-size: 450px; 
+        --item-size: 80px; 
+        --translation-distance: 185px; 
+    }
+    .wheel-inner-circle-vh {
+        width: 160px;
+        height: 160px;
+        font-size: 1.2em;
+    }
+    .value-name-vh {
+        font-size: 0.7em;
+        padding: 0;
+    }
+    .importance-grid-vh {
+        grid-template-columns: 1fr;
+    }
+}
